@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/kotoba-tech/dotsu-ota-v2/main/manifest.schema.json",
+  "title": "Dotsu OTA Manifest",
+  "type": "object",
+  "required": ["schemaVersion", "repository", "platforms"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "const": 1
+    },
+    "repository": {
+      "type": "string",
+      "const": "kotoba-tech/dotsu-ota-v2"
+    },
+    "platforms": {
+      "type": "object",
+      "required": ["ios", "android"],
+      "additionalProperties": false,
+      "properties": {
+        "ios": {
+          "$ref": "#/$defs/appVersions"
+        },
+        "android": {
+          "$ref": "#/$defs/appVersions"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "appVersions": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/otaEntry"
+      }
+    },
+    "otaEntry": {
+      "type": "object",
+      "required": [
+        "otaVersion",
+        "releaseId",
+        "releaseTag",
+        "releaseName",
+        "publishedAt",
+        "assetId",
+        "assetName",
+        "assetSize",
+        "downloadUrl"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "otaVersion": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "releaseId": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "releaseTag": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "releaseName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publishedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "assetId": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "assetName": {
+          "type": "string",
+          "pattern": "^(ios|android)-[0-9]+\\.[0-9]+\\.[0-9]+\\.zip$"
+        },
+        "assetSize": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "downloadUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://github\\.com/kotoba-tech/dotsu-ota-v2/releases/download/"
+        }
+      }
+    }
+  }
+}
