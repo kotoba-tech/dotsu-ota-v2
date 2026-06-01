@@ -1,0 +1,78 @@
+name: Rollback OTA Manifest
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit_sha:
+        description: 'Manifest commit SHA to revert'
+        required: true
+        type: string
+      reason:
+        description: 'Optional rollback reason'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rollback-ota-manifest
+  cancel-in-progress: false
+
+jobs:
+  rollback:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout manifest repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Revert manifest commit
+        env:
+          COMMIT_SHA: ${{ inputs.commit_sha }}
+          REASON: ${{ inputs.reason }}
+        run: |
+          set -euo pipefail
+
+          if ! [[ "$COMMIT_SHA" =~ ^[0-9a-fA-F]{7,40}$ ]]; then
+            echo "::error::Invalid commit SHA: $COMMIT_SHA" >&2
+            exit 1
+          fi
+
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
+
+          if ! git merge-base --is-ancestor "$COMMIT_SHA" HEAD; then
+            echo "::error::Commit is not present on main: $COMMIT_SHA" >&2
+            exit 1
+          fi
+
+          changed_files="$(git show --name-only --format='' "$COMMIT_SHA" | sed '/^$/d')"
+          if [ -z "$changed_files" ]; then
+            echo "::error::Commit has no changed files: $COMMIT_SHA" >&2
+            exit 1
+          fi
+
+          while IFS= read -r file; do
+            case "$file" in
+              manifests/*.json) ;;
+              *)
+                echo "::error::Refusing to revert non-manifest file from commit: $file" >&2
+                exit 1
+                ;;
+            esac
+          done <<< "$changed_files"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git revert --no-edit "$COMMIT_SHA"
+
+          if [ -n "$REASON" ]; then
+            git commit --amend \
+              -m "Rollback OTA manifest ${COMMIT_SHA}" \
+              -m "Reason: ${REASON}"
+          fi
+
+          git push origin main
