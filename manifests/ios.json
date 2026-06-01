@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "repository": "kotoba-tech/dotsu-ota-v2",
+  "platform": "ios",
+  "versions": {
+    "1.4.5": {
+      "otaVersion": 330758772,
+      "releaseId": 330758772,
+      "releaseTag": "0.0.124",
+      "releaseName": "OTA Update ios v1.4.5",
+      "publishedAt": "2026-05-28T09:47:07Z",
+      "assetId": 431954477,
+      "assetName": "ios-1.4.5.zip",
+      "assetSize": 6038824,
+      "downloadUrl": "https://github.com/kotoba-tech/dotsu-ota-v2/releases/download/0.0.124/ios-1.4.5.zip"
+    },
+    "1.4.4": {
+      "otaVersion": 324751637,
+      "releaseId": 324751637,
+      "releaseTag": "0.0.120",
+      "releaseName": "OTA Update ios v1.4.4",
+      "publishedAt": "2026-05-19T06:25:26Z",
+      "assetId": 423943023,
+      "assetName": "ios-1.4.4.zip",
+      "assetSize": 5955903,
+      "downloadUrl": "https://github.com/kotoba-tech/dotsu-ota-v2/releases/download/0.0.120/ios-1.4.4.zip"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "repository": "kotoba-tech/dotsu-ota-v2",
+  "platform": "android",
+  "versions": {
+    "1.4.5": {
+      "otaVersion": 330763529,
+      "releaseId": 330763529,
+      "releaseTag": "0.0.125",
+      "releaseName": "OTA Update android v1.4.5",
+      "publishedAt": "2026-05-28T09:58:19Z",
+      "assetId": 431961926,
+      "assetName": "android-1.4.5.zip",
+      "assetSize": 6050481,
+      "downloadUrl": "https://github.com/kotoba-tech/dotsu-ota-v2/releases/download/0.0.125/android-1.4.5.zip"
+    },
+    "1.4.4": {
+      "otaVersion": 324753710,
+      "releaseId": 324753710,
+      "releaseTag": "0.0.121",
+      "releaseName": "OTA Update android v1.4.4",
+      "publishedAt": "2026-05-19T06:30:23Z",
+      "assetId": 423945958,
+      "assetName": "android-1.4.4.zip",
+      "assetSize": 5965859,
+      "downloadUrl": "https://github.com/kotoba-tech/dotsu-ota-v2/releases/download/0.0.121/android-1.4.4.zip"
+    }
+  }
+}
