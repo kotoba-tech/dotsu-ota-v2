@@ -26,15 +26,15 @@
       "downloadUrl": "https://github.com/kotoba-tech/dotsu-ota-v2/releases/download/0.0.121/android-1.4.4.zip"
     },
     "1.4.6": {
-      "otaVersion": 335020148,
-      "releaseId": 335020148,
-      "releaseTag": "0.0.127",
+      "otaVersion": 342684699,
+      "releaseId": 342684699,
+      "releaseTag": "0.0.131",
       "releaseName": "OTA Update android v1.4.6",
-      "publishedAt": "2026-06-05T15:55:53Z",
-      "assetId": 439440377,
+      "publishedAt": "2026-06-22T05:16:24Z",
+      "assetId": 454250241,
       "assetName": "android-1.4.6.zip",
-      "assetSize": 6307560,
-      "downloadUrl": "https://github.com/kotoba-tech/dotsu-ota-v2/releases/download/0.0.127/android-1.4.6.zip"
+      "assetSize": 6120376,
+      "downloadUrl": "https://github.com/kotoba-tech/dotsu-ota-v2/releases/download/0.0.131/android-1.4.6.zip"
     },
     "1.4.7": {
       "otaVersion": 341363893,
