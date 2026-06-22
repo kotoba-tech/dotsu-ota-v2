@@ -26,15 +26,15 @@
       "downloadUrl": "https://github.com/kotoba-tech/dotsu-ota-v2/releases/download/0.0.120/ios-1.4.4.zip"
     },
     "1.4.6": {
-      "otaVersion": 335015786,
-      "releaseId": 335015786,
-      "releaseTag": "0.0.126",
+      "otaVersion": 342639491,
+      "releaseId": 342639491,
+      "releaseTag": "0.0.129",
       "releaseName": "OTA Update ios v1.4.6",
-      "publishedAt": "2026-06-05T15:45:29Z",
-      "assetId": 439432366,
+      "publishedAt": "2026-06-22T01:37:48Z",
+      "assetId": 454108391,
       "assetName": "ios-1.4.6.zip",
-      "assetSize": 6296111,
-      "downloadUrl": "https://github.com/kotoba-tech/dotsu-ota-v2/releases/download/0.0.126/ios-1.4.6.zip"
+      "assetSize": 6528361,
+      "downloadUrl": "https://github.com/kotoba-tech/dotsu-ota-v2/releases/download/0.0.129/ios-1.4.6.zip"
     }
   }
 }
