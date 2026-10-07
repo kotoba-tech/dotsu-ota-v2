@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "repository": "kotoba-tech/dotsu-ota-v2",
+  "platform": "ios",
+  "versions": {
+    "1.4.14": {
+      "otaVersion": 405384507,
+      "releaseId": 405384507,
+      "releaseTag": "0.0.139",
+      "releaseName": "OTA Update enterprise-ios-1.4.14.zip",
+      "publishedAt": "2026-10-07T04:41:07Z",
+      "assetId": 617587171,
+      "assetName": "enterprise-ios-1.4.14.zip",
+      "assetSize": 7839002,
+      "downloadUrl": "https://github.com/kotoba-tech/dotsu-ota-v2/releases/download/0.0.139/enterprise-ios-1.4.14.zip"
+    }
+  }
+}
