@@ -79,6 +79,17 @@
       "assetName": "ios-1.4.14.zip",
       "assetSize": 7849076,
       "downloadUrl": "https://github.com/kotoba-tech/dotsu-ota-v2/releases/download/0.0.140/ios-1.4.14.zip"
+    },
+    "1.4.15": {
+      "otaVersion": 413276449,
+      "releaseId": 413276449,
+      "releaseTag": "0.0.144",
+      "releaseName": "OTA Update ios-1.4.15.zip",
+      "publishedAt": "2026-10-14T23:41:17Z",
+      "assetId": 642035696,
+      "assetName": "ios-1.4.15.zip",
+      "assetSize": 7879872,
+      "downloadUrl": "https://github.com/kotoba-tech/dotsu-ota-v2/releases/download/0.0.144/ios-1.4.15.zip"
     }
   }
 }
