@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "repository": "kotoba-tech/dotsu-ota-v2",
+  "platform": "android",
+  "versions": {
+    "1.4.14": {
+      "otaVersion": 412515450,
+      "releaseId": 412515450,
+      "releaseTag": "0.0.143",
+      "releaseName": "OTA Update enterprise-android-1.4.14.zip",
+      "publishedAt": "2026-10-14T08:56:50Z",
+      "assetId": 639814575,
+      "assetName": "enterprise-android-1.4.14.zip",
+      "assetSize": 7814611,
+      "downloadUrl": "https://github.com/kotoba-tech/dotsu-ota-v2/releases/download/0.0.143/enterprise-android-1.4.14.zip"
+    }
+  }
+}
